@@ -869,4 +869,4 @@ HTML을 의미에 맞지 않게 마크업한 경우, 또는 스타일링에 필�
 
 
 ## License
-Under MIT License. Copyright &copy; R114.
+Under MIT License. Copyright &copy; HDC현대산업개발 부동산R114.

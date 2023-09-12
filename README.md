@@ -24,7 +24,7 @@
 19. [실수를 예방하고 정정하는 것을 돕는다.](#assist)
 20. [HTML 문법을 준수](#html)
 
-그 어떤 누구나 동등하게 차별 없이 부동산 R114 홈페이지를 이용할 수 있도록 하는 것이 저의 목표입니다. 
+그 어떤 누구나 동등하게 차별 없이 부동산 R114 홈페이지를 이용할 수 있도록 하는 것이 부동산 R114의 목표입니다. 
 부동산 R114에서 제공하는 모든 웹 서비스는 '**부동산 R114 웹 접근성 가이드라인**'을 준수해야 합니다. 데스크톱, 태블릿, 모바일, 하이브리드 앱에 이르기까지 웹 기술을 통해 구현하는 모든 서비스가 이 가이드라인의 적용 대상입니다.
 
 
@@ -978,4 +978,4 @@ document.getElementsByClassName[0]("클래스명").addEventListener("mouseover f
 
 
 ## License
-Under MIT License. Copyright &copy; R114.
+Under MIT License. Copyright &copy; HDC현대산업개발 부동산R114.
