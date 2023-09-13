@@ -37,6 +37,18 @@
 
 ---
 
+```html
+<!-- 잘못된 예시 -->
+
+React 접근성 추후 업데이트
+- 참고 영상
+https://www.youtube.com/@AOA11Y
+<a href="https://youtube.com/playlist?list=PLtaz5vK7MbK2DcZZEd1oGLrZsIDlUc9gm&si=e6zx2msboNzGIOkV">리액트 접근성 추후 추가</a>
+
+```
+
+---
+
 ## 1. 대체 텍스트 <a id="altIr" href="#altIr">#</a>
 * 텍스트가 아닌 콘텐츠는 오류로 인해 렌더링 또는 불러오기가 불가능할 경우를 대비하여 그 의미나 용도를 이해할 수 있도록 대체 텍스트를 제공해야 한다.
 * 대체 텍스트는 중복으로 제공하지 않는다.
@@ -224,7 +236,8 @@ https://www.whitehouse.gov/
 
 ---
 ## 5. 명확한 지시사항 제공 <a id="instruction" href="#instruction">#</a>
-* 이 부분의 검사는 퍼블리셔 또는 개발자 직접 수동으로 하나하나 검사를 해야 한다.
+* 이 부분의 검사는 퍼블리셔 또는 개발자가 직접 수동으로 하나하나 검사를 해야 한다.
+* 지시 사항은 모양, 크기, 위치, 방향, 색, 소리 등에 관계없이 인식될 수 있어야 한다.
 * 소리 등 지시사항을 청각정보로만 제공한 경우 - 퀴즈를 풀 때 소리만 나오는 경우도 텍스트도 같이 줘야한다.
 * 시각 및 청각을 테스트하는 검사 콘텐츠, 또는 시각, 청각을 통한 게임 콘텐츠 등 특수 목적의 콘텐츠는 예외로 처리한다.
 
@@ -237,15 +250,18 @@ https://www.whitehouse.gov/
 <button type="button">클릭</button>
 ```
 ### 담당자
+* 기획자
 * 퍼블리셔
 * 개발자
 
 ### 기대 효과
-* 
+* 시각 장애인들에게 텍스트 리더기를 통하여 원활한 웹 이용에 도움을 준다.
 
 ### 관련 표준
-* 
+* [1.3.6 Identify Purpose](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components)
 
+### 평가 도구
+* [OpenWAX](https://chrome.google.com/webstore/detail/openwax/bfahpbmaknaeohgdklfbobogpdngngoe?hl=ko)
 
 
 ---
@@ -297,7 +313,7 @@ document.getElementsByClassName[0]("클래스명").addEventListener("mouseover f
 ```
 ### 담당자
 * 퍼블리셔
-* 프론트엔드 개발자
+* 개발자
 
 ### 기대 효과
 * 전맹 또는 상지 장애가 있는 사용자와 키보드를 선호하는 사용자의 탐색과 조작을 돕는다.
@@ -724,6 +740,7 @@ document.getElementsByClassName[0]("클래스명").addEventListener("mouseover f
 
 ## 16. 콘텐츠의 선형화 <a id="linear" href="#linear">#</a>
 * 디자인이 된 html의 css를 제거해도 맥락이 이해가 가능해야 한다. 즉 콘텐츠의 순서를 논리적으로 제공하지 않아 전후 맥락이 이해가 가야 한다.
+* 콘텐츠는 보조 기기 등을 통해서도 논리적인 순서로 이해할 수 있도록 제공해야 한다.
 * 콘텐츠의 구조를 논리적으로 제공하지 않아 주종 관계를 이해할 수 없는 경우
 * 제목과 내용 사이에 관련 없는 콘텐츠를 포함하고 있더라도 제목과 내용을 앵커 a 태그 기능으로 연결했다면 논리적인 순서로 제공을 한 것으로 인정
 
@@ -745,13 +762,17 @@ document.getElementsByClassName[0]("클래스명").addEventListener("mouseover f
 ```
 
 ### 담당자
+* 디자이너
 * 퍼블리셔
 
 ### 기대 효과
-* 
+* 난독증 환자들이 원할하게 내용을 이해할 수 있다.
 
 ### 관련 표준
-* 
+* [1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships)
+
+### 평가 도구
+* [OpenWAX](https://chrome.google.com/webstore/detail/openwax/bfahpbmaknaeohgdklfbobogpdngngoe?hl=ko)
 
 
 ---
@@ -763,7 +784,8 @@ document.getElementsByClassName[0]("클래스명").addEventListener("mouseover f
 * 제목 세로가 내용 셀은 각각 th, td 태그로 구분을 해야 한다.
 * 다단, 병합 등 복잡한 표를 제공 시 headers, id 속성을 통해 제목셀과 내용 셀을 연결해야 한다.
 * 표의 정보를 이해하기 어려운 중첩 표(표 안의 표)를 넣어 정보를 제공한 경우는 접근성 위반이다.
-* 어쩔 수 없이 배치만 하는 테이블을 제공해야 하는 경우 th, caption 속성을 사용하지 말아햐 함
+* 어쩔 수 없이 배치만 하는 테이블을 제공해야 하는 경우 th, caption 속성을 사용하지 말아야 한다.
+* 시각 장애인들은 텍스트리더기가 마크업을 통해 표를 읽어주기 때문에 데이터를 표로 구성한 경우 표의 내용, 구조 등을 이해할 수 있게 제목 셀과 데이터 셀이 구분되도록 구성해야 한다.
 
 
 ```html
@@ -834,12 +856,17 @@ document.getElementsByClassName[0]("클래스명").addEventListener("mouseover f
 
 ### 담당자
 * 퍼블리셔
+* 개발자
 
 ### 기대 효과
-* 
+* 시각 장애인들이 텍스트리더기를 통해 원할하게 테이블 데이터를 들을 수 있다.
 
 ### 관련 표준
-* 
+* [1.3.1 Info and Relationships](https://www.w3.org/WAI/tutorials/tables/multi-level/)
+* [1.3.1 Info and Relationships](https://www.w3.org/WAI/tutorials/tables/caption-summary/)
+
+### 평가 도구
+* [OpenWAX](https://chrome.google.com/webstore/detail/openwax/bfahpbmaknaeohgdklfbobogpdngngoe?hl=ko)
 
 
 ---
@@ -878,6 +905,7 @@ document.getElementsByClassName[0]("클래스명").addEventListener("mouseover f
 
 ### 담당자
 * 퍼블리셔
+* 개발자
 
 ### 기대 효과
 * 보조 기기가 폼 컨트롤에 독립적으로 접근했을 때 컨트롤에 대한 설명을 제공할 수 있다.
@@ -941,13 +969,13 @@ document.getElementsByClassName[0]("클래스명").addEventListener("mouseover f
 * 모든 id 속성의 값은 하나의 문서 안에서 중복 없이 유일하다.
 
 ```html
-<!-- X -->
+<!-- 잘못된 예시 -->
 <div><span>...</div> // span 종료 태그 생략 오류.
 <span><a><div>...</div></a></span> // span 요소가 div를 감싼 것은 오류.
 <div class="aaa" class="bbb">...</div> // 속성은 한 번만 선언해야 한다.
 <div id="xyz">...</div><div id="xyz">...</div> // xyz 값은 페이지에서 유일해야 한다.
 
-<!-- O -->
+<!-- 잘 된 예시 -->
 <div><span>...</span></div>
 <div><a><div>...</div></a></div>
 <div class="aaa bbb">...</div>
